@@ -23,7 +23,7 @@ body {
 
 /* Layouting only  (your work)*/
 
-.a {
+.a, .f {
   grid-column: span 3;
 }
 
@@ -40,8 +40,6 @@ body {
   grid-column: span 2;
 }
 
-.f {
-  grid-column: span 3;
-}
+
 
  
