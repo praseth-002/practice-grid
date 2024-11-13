@@ -4,8 +4,11 @@ body {
 }
 
 .card-container {
- 
   margin: 50px;
+ 
+  display: grid;
+  gap: 1em;
+  grid-template-columns: repeat(5, 1fr);
 }
  
 .card {
@@ -13,6 +16,10 @@ body {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 16px;
+
+  grid-row: span 2;
+  display: grid;
+  grid-template-rows: repeat(1, 1fr);
 }
 
 .card-image {
@@ -39,6 +46,10 @@ body {
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+
+.span2 {
+  grid-column: span 2;
 }
 
  
