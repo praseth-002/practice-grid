@@ -7,8 +7,10 @@ body {
   background-color: #333333;
   color: #444;
   padding: 20px;
-
   height: 90vh;
+
+  display: grid;
+  gap: 1em;
 }
 
 .item {
@@ -21,5 +23,25 @@ body {
 
 /* Layouting only  (your work)*/
 
- 
+.a {
+  grid-column: span 3;
+}
+
+.b {
+  grid-column: span 1;
+  grid-row: span 2;
+}
+
+.c, .d {
+  grid-column: span 1;
+}
+
+.e {
+  grid-column: span 2;
+}
+
+.f {
+  grid-column: span 3;
+}
+
  
