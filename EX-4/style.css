@@ -1,26 +1,28 @@
 body {
+    margin: 0;
+    padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: grey;
+    background-color: #C6E7FF;
 }
 
 .container {
     display: flex;
     flex-direction: row;
-    /* gap: 1em; */
-    min-height: calc(100vh - 1em);
+    min-height: 100vh;
     justify-content: center;
     align-items: stretch;
+    margin: 0;
 }
 
 .navbar {
-    background-color: white;
+    background-color: #D4F6FF;
     border-radius: 0.5em 0 0 0.5em;
     padding: 1em;
     display: flex;
     flex-direction: column;
     gap: 1em;
     width: 25vw;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .navtitle {
@@ -38,20 +40,20 @@ body {
 }
 
 .botnav {
-    background-color: lightgrey;
+    background-color: #FFDDAE;
     border-radius: 0.5em;
     /* margin: 1em; */
     padding: 0.5em;
 }
 
 .main {
-    background-color: #ececec;
+    background-color: #C6E7FF;
     width: 50vw;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 1em;
-    justify-content: space-evenly;
+    justify-content: space-between;
     gap: 1em;
 }
 
@@ -63,7 +65,7 @@ body {
 }
 
 .mainwelcome {
-    background-color: pink;
+    background-color: #FBFBFB;
     width: 80%;
     padding: 1em;
     border-radius: 0.5em;
@@ -76,10 +78,10 @@ body {
 }
 
 .mainstat {
-    background-color: white;
+    background-color: #FBFBFB;
     width: 80%;
     padding: 1em;
-    border: 2px solid #c4c4c4;
+    /* border: 2px solid #c4c4c4; */
     border-radius: 0.5em;
 }
 
@@ -91,6 +93,7 @@ body {
     list-style: none;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
 .mainstat > ul > li {
@@ -98,14 +101,16 @@ body {
 }
 
 .maincourse {
+    background-color: #D4F6FF;
     display: flex;
     flex-direction: row;
     width: 80%;
     padding: 1em;
-    border: 2px solid #c4c4c4;
+    /* border: 2px solid #FBFBFB; */
     border-radius: 0.5em;
     gap: 1em;
     overflow-x: scroll;
+    scrollbar-color: #FBFBFB #D4F6FF;
 }
 
 .courseitems {
@@ -113,7 +118,7 @@ body {
     display: row;
     gap: 1em;
     padding: 0.5em;
-    background-color: lightsalmon;
+    background-color: #FFDDAE;
     border-radius: 0.5em;
     min-width: 150px;
     justify-content: space-between;
@@ -126,7 +131,7 @@ body {
 }
 
 .courseitems > div:first-child {
-    background-color: red;
+    background-color: #FBFBFB;
     border-radius: 0.5em;
     min-width: none;width: 40px;
     min-width: none;height: 40px;
@@ -136,29 +141,40 @@ body {
 }
 
 .profile {
-    background-color: white;
+    background-color: #D4F6FF;
     border-radius: 0 0.5em 0.5em 0;
     width: 25vw;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     padding: 1em;
 }
 
-.profile > img {
+.profile > div > img {
     border-radius: 50px;
-    height: 50px;
-    width: 50px;
-    border: 1px solid black;
+    height: 90px;
+    width: 90px;
+    border: 1px solid #C6E7FF;
 }
 
 .reminder {
-    height: 50%;
+    width: 80%;
+    height: 30%;
     display: flex;
     flex-direction: column;
     gap: 1em;
     overflow-x: scroll;
+}
+
+.smallnav {
+    display: none;
+}
+
+.smallitems {
+    flex-grow: 1;
+    background-color: lightblue;
+    border-radius: 0.5em;
 }
 
 @media only screen and (max-width: 800px) {
@@ -172,5 +188,34 @@ body {
 
     .main {
         width: calc(100% - 2em);
+        /* padding: 5em; */
+        height: 100vh;
+        justify-content: space-between;
+
+    }
+
+    .container {
+        flex-direction: column;
+        margin-bottom: calc(60px + 1em);
+        align-items: center;
+        justify-content: stretch;
+    }
+
+    .smallnav {
+        display: flex;
+        /* position: sticky;
+        top: 0; */
+        /* position: absolute;
+        bottom: 0vh; */
+        position: fixed;
+        bottom: 0;
+        flex-direction: row;
+        justify-content: center;
+        background-color: black;
+        min-height: 60px;
+        min-width: calc(100% - 1em);
+        color: white;
+        padding: 0.5em;
+        gap: 0.5em;
     }
 }
